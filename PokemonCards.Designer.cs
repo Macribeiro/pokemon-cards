@@ -31,27 +31,28 @@
             pokemonCards = new PictureBox();
             nextBtn = new Button();
             previousBtn = new Button();
-            pokeName = new TextBox();
-            pokeType = new TextBox();
-            pokeDescription = new TextBox();
-            pokeId = new TextBox();
+            pokeName = new Label();
+            pokeType = new Label();
+            pokeId = new Label();
+            background = new Label();
             ((System.ComponentModel.ISupportInitialize)pokemonCards).BeginInit();
             SuspendLayout();
             // 
             // pokemonCards
             // 
-            pokemonCards.Location = new Point(250, 216);
+            pokemonCards.BackColor = Color.Sienna;
+            pokemonCards.Location = new Point(119, 113);
             pokemonCards.Name = "pokemonCards";
-            pokemonCards.Size = new Size(319, 296);
-            pokemonCards.SizeMode = PictureBoxSizeMode.AutoSize;
+            pokemonCards.Size = new Size(271, 305);
+            pokemonCards.SizeMode = PictureBoxSizeMode.StretchImage;
             pokemonCards.TabIndex = 0;
             pokemonCards.TabStop = false;
             // 
             // nextBtn
             // 
-            nextBtn.Location = new Point(947, 12);
+            nextBtn.Location = new Point(990, 280);
             nextBtn.Name = "nextBtn";
-            nextBtn.Size = new Size(75, 23);
+            nextBtn.Size = new Size(75, 61);
             nextBtn.TabIndex = 1;
             nextBtn.Text = "Next";
             nextBtn.UseVisualStyleBackColor = true;
@@ -59,9 +60,9 @@
             // 
             // previousBtn
             // 
-            previousBtn.Location = new Point(12, 12);
+            previousBtn.Location = new Point(12, 280);
             previousBtn.Name = "previousBtn";
-            previousBtn.Size = new Size(75, 23);
+            previousBtn.Size = new Size(75, 61);
             previousBtn.TabIndex = 2;
             previousBtn.Text = "Previous";
             previousBtn.UseVisualStyleBackColor = true;
@@ -69,57 +70,60 @@
             // 
             // pokeName
             // 
-            pokeName.BackColor = Color.DimGray;
-            pokeName.BorderStyle = BorderStyle.None;
-            pokeName.Font = new Font("Verdana", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            pokeName.Location = new Point(367, 52);
+            pokeName.AutoSize = true;
+            pokeName.BackColor = Color.Sienna;
+            pokeName.FlatStyle = FlatStyle.Popup;
+            pokeName.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            pokeName.ForeColor = Color.White;
+            pokeName.Location = new Point(396, 113);
             pokeName.Name = "pokeName";
-            pokeName.Size = new Size(282, 33);
-            pokeName.TabIndex = 3;
-            pokeName.TextAlign = HorizontalAlignment.Center;
+            pokeName.Size = new Size(118, 47);
+            pokeName.TabIndex = 7;
+            pokeName.Text = "Name";
+            pokeName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pokeType
             // 
-            pokeType.BackColor = Color.DimGray;
-            pokeType.BorderStyle = BorderStyle.None;
-            pokeType.Font = new Font("Verdana", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            pokeType.ForeColor = SystemColors.InfoText;
-            pokeType.Location = new Point(376, 91);
+            pokeType.AutoSize = true;
+            pokeType.BackColor = Color.Sienna;
+            pokeType.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            pokeType.Location = new Point(279, 491);
             pokeType.Name = "pokeType";
-            pokeType.Size = new Size(282, 33);
-            pokeType.TabIndex = 4;
-            pokeType.TextAlign = HorizontalAlignment.Center;
-            // 
-            // pokeDescription
-            // 
-            pokeDescription.BackColor = SystemColors.GrayText;
-            pokeDescription.BorderStyle = BorderStyle.None;
-            pokeDescription.Font = new Font("Verdana", 18F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            pokeDescription.Location = new Point(367, 157);
-            pokeDescription.Name = "pokeDescription";
-            pokeDescription.Size = new Size(100, 30);
-            pokeDescription.TabIndex = 5;
+            pokeType.Size = new Size(57, 25);
+            pokeType.TabIndex = 8;
+            pokeType.Text = "Type";
             // 
             // pokeId
             // 
-            pokeId.Location = new Point(31, 123);
+            pokeId.AutoSize = true;
+            pokeId.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            pokeId.Location = new Point(873, 68);
             pokeId.Name = "pokeId";
-            pokeId.Size = new Size(56, 23);
-            pokeId.TabIndex = 6;
+            pokeId.Size = new Size(27, 21);
+            pokeId.TabIndex = 11;
+            pokeId.Text = "ID";
+            // 
+            // background
+            // 
+            background.BackColor = Color.Sienna;
+            background.Location = new Point(279, 22);
+            background.Name = "background";
+            background.Size = new Size(474, 510);
+            background.TabIndex = 13;
             // 
             // PokeImages
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.WindowFrame;
-            ClientSize = new Size(1034, 626);
-            Controls.Add(pokeId);
-            Controls.Add(pokeDescription);
-            Controls.Add(pokeType);
+            BackColor = Color.Sienna;
+            ClientSize = new Size(1077, 649);
             Controls.Add(pokeName);
+            Controls.Add(pokeId);
+            Controls.Add(pokeType);
             Controls.Add(previousBtn);
             Controls.Add(nextBtn);
             Controls.Add(pokemonCards);
+            Controls.Add(background);
             ForeColor = SystemColors.ControlText;
             Name = "PokeImages";
             Text = "Pokémon Cards";
@@ -133,9 +137,9 @@
         private PictureBox pokemonCards;
         private Button nextBtn;
         private Button previousBtn;
-        private TextBox pokeName;
-        private TextBox pokeType;
-        private TextBox pokeDescription;
-        private TextBox pokeId;
+        private Label pokeName;
+        private Label pokeType;
+        private Label pokeId;
+        private Label background;
     }
 }
